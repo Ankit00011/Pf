@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback, memo } from "react"
 import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
-import { DotLottieReact } from "@lottiefiles/dotlottie-react"
-import codingAnimation from "../../public/Coding.json"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -207,19 +205,15 @@ const Home = () => {
                 <div className={`relative lg:left-12 z-10 w-[108%] sm:w-[112%] lg:w-[118%] max-w-none transform transition-transform duration-500 ${
                   isHovering ? "scale-[1.06]" : "scale-[1.02]"
                 }`}>
-                  <DotLottieReact
-                    data={codingAnimation}
-                    loop
-                    autoplay
+                  <img
+                    src="/Coding.gif"
+                    alt="Coding animation"
                     className={`w-full h-full drop-shadow-[0_18px_50px_rgba(79,82,201,0.18)] transition-all duration-500 ${
                       isHovering
                         ? "scale-[1.02] rotate-1"
                         : "scale-100"
                     }`}
-                    renderConfig={{
-                      autoResize: true,
-                      devicePixelRatio: 2,
-                    }}
+                    loading="eager"
                   />
                 </div>
 
